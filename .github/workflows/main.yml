@@ -30,10 +30,6 @@ jobs:
         run: |
             echo Making ios build
             
-            ls
-            
-            cd ../demoios/demoios
-            
             xcodebuild -project DemoAppiOS.xcodeproj -scheme DemoAppiOS -sdk iphoneos14.4 clean analyze
 
             xcodebuild -scheme DemoAppiOS -workspace DemoAppiOS.xcworkspace
