@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:build"
+      name = "build">
+      <Group
+         location = "group:XCBuildData"
+         name = "XCBuildData">
+         <FileRef
+            location = "group:b39254f6eb4c984c6053fff26ea90994-manifest.xcbuild">
+         </FileRef>
+         <FileRef
+            location = "group:63f2960a72dfa003b79cf25e68ea4a92-manifest.xcbuild">
+         </FileRef>
+         <FileRef
+            location = "group:b39254f6eb4c984c6053fff26ea90994-desc.xcbuild">
+         </FileRef>
+         <FileRef
+            location = "group:BuildDescriptionCacheIndex-edd8dfa608455772bfc7a0984352a6b9">
+         </FileRef>
+         <FileRef
+            location = "group:build.db">
+         </FileRef>
+         <FileRef
+            location = "group:63f2960a72dfa003b79cf25e68ea4a92-desc.xcbuild">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:DemoAppiOS.build"
+         name = "DemoAppiOS.build">
+         <Group
+            location = "group:Release-iphoneos"
+            name = "Release-iphoneos">
+            <Group
+               location = "group:DemoAppiOS.build"
+               name = "DemoAppiOS.build">
+               <Group
+                  location = "group:Objects-normal"
+                  name = "Objects-normal">
+                  <Group
+                     location = "group:arm64"
+                     name = "arm64">
+                     <FileRef
+                        location = "group:DemoAppiOS.SwiftFileList">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS-master.swiftdeps">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS-OutputFileMap.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS.LinkFileList">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS-master.d">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS-master.swiftdeps~moduleonly">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS_dependency_info.dat">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS-Swift.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS.swiftdoc">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ContentView.o">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS-master.dia">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS.swiftmodule">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOSApp.o">
+                     </FileRef>
+                     <FileRef
+                        location = "group:DemoAppiOS.swiftsourceinfo">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <Group
+                  location = "group:DerivedSources"
+                  name = "DerivedSources">
+                  <FileRef
+                     location = "group:Entitlements.plist">
+                  </FileRef>
+                  <FileRef
+                     location = "group:DemoAppiOS-Swift.h">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:assetcatalog_generated_info.plist">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS-all-non-framework-target-headers.hmap">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS-generated-files.hmap">
+               </FileRef>
+               <FileRef
+                  location = "group:SwiftStdLibToolInputDependencies.dep">
+               </FileRef>
+               <FileRef
+                  location = "group:all-product-headers.yaml">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS-own-target-headers.hmap">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS-project-headers.hmap">
+               </FileRef>
+               <FileRef
+                  location = "group:assetcatalog_dependencies">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS.app.xcent">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS.hmap">
+               </FileRef>
+               <FileRef
+                  location = "group:DemoAppiOS-all-target-headers.hmap">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Release-iphoneos"
+         name = "Release-iphoneos">
+         <FileRef
+            location = "group:DemoAppiOS.app">
+         </FileRef>
+         <FileRef
+            location = "group:DemoAppiOS.app.dSYM">
+         </FileRef>
+         <Group
+            location = "group:DemoAppiOS.swiftmodule"
+            name = "DemoAppiOS.swiftmodule">
+            <FileRef
+               location = "group:arm64-apple-ios.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:arm64.swiftmodule">
+            </FileRef>
+            <Group
+               location = "group:Project"
+               name = "Project">
+               <FileRef
+                  location = "group:arm64-apple-ios.swiftsourceinfo">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftsourceinfo">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:arm64-apple-ios.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:arm64.swiftdoc">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "group:DemoAppiOS"
+      name = "DemoAppiOS">
+      <Group
+         location = "group:Assets.xcassets"
+         name = "Assets.xcassets">
+         <Group
+            location = "group:AppIcon.appiconset"
+            name = "AppIcon.appiconset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:AccentColor.colorset"
+            name = "AccentColor.colorset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Preview Content"
+         name = "Preview Content">
+         <Group
+            location = "group:Preview Assets.xcassets"
+            name = "Preview Assets.xcassets">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:DemoAppiOSApp.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ContentView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:DemoAppiOS.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:DemoAppiOSTests"
+      name = "DemoAppiOSTests">
+      <FileRef
+         location = "group:DemoAppiOSTests.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:DemoAppiOSUITests"
+      name = "DemoAppiOSUITests">
+      <FileRef
+         location = "group:DemoAppiOSUITests.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+</Workspace>
