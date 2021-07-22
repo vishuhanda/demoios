@@ -32,8 +32,8 @@ jobs:
             
             xcodebuild -project DemoAppiOS.xcodeproj -scheme DemoAppiOS -sdk iphoneos14.4 clean analyze
 
-            xcodebuild -scheme DemoAppiOS -workspace DemoAppiOS.xcworkspace
-
             xcodebuild -workspace DemoAppiOS.xcworkspace -scheme DemoAppiOS  -destination generic/platform=iOS build
 
             xcodebuild -workspace DemoAppiOS.xcworkspace -scheme DemoAppiOS -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/DemoAppiOS.xcarchive
+
+            xcodebuild -exportArchive -archivePath $PWD/build/DemoAppiOS.xcarchive -exportOptionsPlist demoAppiOS/info.plist -exportPath $PWD/build
