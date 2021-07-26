@@ -65,3 +65,26 @@ jobs:
         with:
           name: browserstackurl
           path: browser-stack-url.txt
+          
+  run-automation-script:
+    needs: [iOS-build,upload-app-on-browserstack]
+    # The type of runner that the job will run on
+    runs-on:  self-hosted
+        
+    steps: 
+      - name: Download browserstack artifact
+        run : |
+            browserstackurl=$(cat browser-stack-url.txt)
+            echo browserstackurl $browserstackurl
+            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' \
+                  --header 'Accept: application/vnd.github.v3+json' \
+                  --header 'Authorization: Bearer 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' \
+                  --header 'Content-Type: application/json' \
+                  --data-raw '
+                  {
+                      "event_type": "triggermavenbuild",
+                      "client_payload":{
+                          "abc":$browserstackurl
+                      }
+                  }
+                  '
