@@ -40,10 +40,28 @@ jobs:
 
             xcodebuild -exportArchive -archivePath $PWD/build/DemoAppiOS.xcarchive -exportOptionsPlist demoAppiOS/info.plist -exportPath $PWD/build
             
+            
+  upload-app-on-browserstack:
+    needs: iOS-build
+    # The type of runner that the job will run on
+    runs-on:  self-hosted
+
+    steps:
+      - name: upload app on browserstack
+        run: |
+            echo getting iOS build
+            echo uploading app to browserstack
+            
             appPath=$(curl -u "vhvl_9KOMkx:puL2x1SZ4AhecfrcxW39" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@build/DemoAppiOS.ipa")
 
             echo $appPath
 
-            browserStackAppPath=$(echo $appPath | jq --raw-output '.app_url')
+            browserStackAppPath=$(echo $appPath | jq --raw-output '.app_url')       
             
-            echo $browserStackAppPath
+            echo $browserStackAppPath > browser-stack-url.txt
+            
+      - name: Storing in an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: browserstackurl
+          path: browser-stack-url.txt
