@@ -40,4 +40,40 @@ jobs:
 
             xcodebuild -exportArchive -archivePath $PWD/build/DemoAppiOS.xcarchive -exportOptionsPlist demoAppiOS/info.plist -exportPath $PWD/build
             
-            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: token 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' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":"bs://08760d3f8668615030d376a1f755544a4e027df3"}}'
+  upload-app-on-browserstack:
+    needs: iOS-build
+    # The type of runner that the job will run on
+    runs-on:  self-hosted
+
+    steps:
+      - name: upload app on browserstack
+        run: |
+            echo getting iOS build
+            echo uploading app to browserstack
+            
+            appPath=$(curl -u "vhvl_9KOMkx:puL2x1SZ4AhecfrcxW39" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@build/DemoAppiOS.ipa")
+
+            echo $appPath
+
+            browserStackAppPath=$(echo $appPath | jq --raw-output '.app_url')       
+            
+            echo $browserStackAppPath > browser-stack-url.txt
+            
+      - name: Storing in an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: browserstackurl
+          path: browser-stack-url.txt
+          
+  run-automation-script:
+    needs: [iOS-build,upload-app-on-browserstack]
+    # The type of runner that the job will run on
+    runs-on:  self-hosted
+        
+    steps: 
+      - name: Download browserstack artifact
+        run : |
+            browserstackurl=$(cat browser-stack-url.txt)
+            echo browserstackurl $browserstackurl
+            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: token ghp_Jf4r4PC48nuOlm1ik4XUNCTEtHSDbp3QxFY' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":"bs://08760d3f8668615030d376a1f755544a4e027df3"}}'
+       # curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: Bearer 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' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":$browserstackurl}}'
