@@ -37,3 +37,11 @@ jobs:
             xcodebuild -workspace DemoAppiOS.xcworkspace -scheme DemoAppiOS -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/DemoAppiOS.xcarchive
 
             xcodebuild -exportArchive -archivePath $PWD/build/DemoAppiOS.xcarchive -exportOptionsPlist demoAppiOS/info.plist -exportPath $PWD/build
+            
+            appPath=$(curl -u "vhvl_9KOMkx:puL2x1SZ4AhecfrcxW39" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@build/DemoAppiOS.ipa")
+
+            echo $appPath
+
+            browserStackAppPath=$(echo $appPath | jq --raw-output '.app_url')
+            
+            echo $browserStackAppPath
