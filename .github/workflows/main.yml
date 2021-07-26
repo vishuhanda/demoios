@@ -76,5 +76,5 @@ jobs:
         run : |
             browserstackurl=$(cat browser-stack-url.txt)
             echo browserstackurl $browserstackurl
-            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: token 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' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":"bs://08760d3f8668615030d376a1f755544a4e027df3"}}'
+            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: token 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' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":"bs://08760d3f8668615030d376a1f755544a4e027df3"}}'
        # curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: Bearer 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' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":$browserstackurl}}'
