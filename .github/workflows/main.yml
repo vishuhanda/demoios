@@ -28,6 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build iOS project
         run: |
+            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept: application/vnd.github.v3+json' --header 'Authorization: token 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' --header 'Content-Type: application/json' --data-raw '{"event_type": "triggermavenbuild","client_payload":{"abc":"bs://08760d3f8668615030d376a1f755544a4e027df3"}}'        
+        
             echo Making ios build
             
             xcodebuild -allowProvisioningUpdates
