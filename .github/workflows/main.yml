@@ -33,8 +33,7 @@ jobs:
             
             which curl
             
-            curl --location --request POST 'https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches' --header 'Accept:application/vnd.github.v3+json' --header 'Authorization:token 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' --header 'Content-Type:application/json' --data-raw '{"event_type":"triggermavenbuild","client_payload":{"abc":"bs://08760d3f8668615030d376a1f755544a4e027df3"}}'        
-        
+            curl  -X POST -H "Accept:application/vnd.github.v3+json" -H "Authorization:token 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" https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches -d '{"event_type":"triggermavenbuild"}'        
 #             echo Making ios build
             
 #             xcodebuild -allowProvisioningUpdates
