@@ -27,6 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build iOS project
+        shell: bash 
         run: |
         
             curl -V
@@ -34,7 +35,7 @@ jobs:
             which curl
             
             
-              curl  -X POST -H "Accept:application/vnd.github.v3+json" -H "Authorization:token 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" https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches -d '{"event_type":"triggermavenbuild"}'
+              curl  -X POST -H "Accept:application/vnd.github.v3+json" -H "Authorization:token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches -d '{"event_type":"triggermavenbuild"}'
 #             echo Making ios build
             
 #             xcodebuild -allowProvisioningUpdates
