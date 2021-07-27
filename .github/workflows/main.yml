@@ -29,9 +29,7 @@ jobs:
       - name: Build iOS project
         shell: bash 
         run: |
-            
-            
-      #      curl  -X POST -H "Accept:application/vnd.github.v3+json" -H "Authorization:token ${{ secrets.DEMOIOS }}" https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches -d '{"event_type":"triggermavenbuild"}'
+
             echo Making ios build
             
             xcodebuild -allowProvisioningUpdates
