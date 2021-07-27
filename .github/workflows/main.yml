@@ -80,6 +80,6 @@ jobs:
             browserstackurl=$(cat browser-stack-url.txt)
             echo browserstackurl $browserstackurl
             
-            curl  -X POST -H "Accept:application/vnd.github.v3+json" -H "Authorization:token ${{ secrets.DEMOIOS }}" https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches -d '{"event_type":"triggermavenbuild","client_payload":{"abc":$browserstackurl}"}'
+            curl  -X POST -H "Accept:application/vnd.github.v3+json" -H "Authorization:token ${{ secrets.DEMOIOS }}" https://api.github.com/repos/vishuhanda/browserstacknewappium/dispatches -d '{"event_type":"triggermavenbuild","client_payload":{"abc":"$browserstackurl"}"}'
           
      
